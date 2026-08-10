@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yudun-zhineng"
+version = "0.1.0"
+description = "御盾智核 P0 Golden Path modular monolith"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "alembic>=1.16,<2",
+  "dpkt>=1.9.8,<2",
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "langgraph>=1,<2",
+  "langgraph-checkpoint-sqlite>=3,<4",
+  "pydantic>=2.11,<3",
+  "sqlalchemy>=2.0,<3",
+  "ulid-py>=1.1,<2",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[dependency-groups]
+dev = [
+  "mypy>=1.17,<2",
+  "pytest>=8.4,<10",
+  "pytest-cov>=6.2,<8",
+  "ruff>=0.12,<1",
+]
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["backend/app", "backend/tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["app"]
+mypy_path = "backend"
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["ulid", "ulid.*", "dpkt", "dpkt.*"]
+ignore_missing_imports = true

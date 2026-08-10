@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-08-09T18:38:04.913Z",
+  "viewport": "1280x720",
+  "external_network": "BLOCKED",
+  "external_requests_attempted": [],
+  "result": "PASS",
+  "timings_ms": {
+    "frontend_load": 290.11,
+    "reset": 103.91,
+    "replay_to_approval": 417.28,
+    "approval_resume": 230.12,
+    "full_demo": 2257.89
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "generated_at": "2026-08-09T18:39:58.916Z",
+  "runs": [
+    {
+      "run": 1,
+      "run_id": "run_01KZKX659M8JVPA7AR8Q1CKWJ6",
+      "incident_id": "inc_01KZKX65A08STSZPAN54CY0ZK9",
+      "approvals": 0,
+      "preauthorization": {
+        "schema_version": "1.0",
+        "created_at": "2026-08-09T18:39:58.319440Z",
+        "metadata": {},
+        "preauthorization_id": "paz_01KZKX65BFV8Y6KRZZA354D5BH",
+        "incident_id": "inc_01KZKX65A08STSZPAN54CY0ZK9",
+        "action_request_id": "arq_01KZKX65B8Q23BQCPQWND4MVPC",
+        "run_mode": "COMPETITION_AUTONOMOUS",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "environment": "SANDBOX",
+        "policy_version": "autonomous-sandbox-1.0",
+        "allowed_operations": [
+          "FREEZE_OLD_KEY",
+          "CREATE_NEW_KEY_VERSION",
+          "UPDATE_CI_BINDING"
+        ],
+        "request_digest": "5c391b7899a6847dd8fc483c1f9c900360462bfc98066c2d22957716fa0a5fde",
+        "guard_checks": [
+          {
+            "schema_version": "1.0",
+            "check_id": "RUN_MODE",
+            "passed": true,
+            "reason": "RunMode must be COMPETITION_AUTONOMOUS."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "EXPLICIT_CONFIG",
+            "passed": true,
+            "reason": "Competition autonomous execution must be explicitly enabled."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SANDBOX_ENVIRONMENT",
+            "passed": true,
+            "reason": "Only the local SANDBOX state service is eligible."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SCENARIO_ALLOWLIST",
+            "passed": true,
+            "reason": "Scenario must be in the frozen competition allowlist."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "ACTION_ALLOWLIST",
+            "passed": true,
+            "reason": "Only the credential containment plan is autonomous-eligible."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "OPERATION_ALLOWLIST",
+            "passed": true,
+            "reason": "Only the frozen three-step operation sequence is allowed."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "TARGET_SCOPE",
+            "passed": true,
+            "reason": "Target must belong to current incident facts."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "FACTS_COMPLETE",
+            "passed": true,
+            "reason": "All six evidence-validated facts are required."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SOURCE_SCOPE",
+            "passed": true,
+            "reason": "Autonomous facts may use only SYNTHETIC or MOCK evidence."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_PLAINTEXT_SECRET",
+            "passed": true,
+            "reason": "Request must contain references, never plaintext credentials."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_PRODUCTION_ADAPTER",
+            "passed": true,
+            "reason": "No production write adapter may be active."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_ARBITRARY_COMMAND",
+            "passed": true,
+            "reason": "Shell, subprocess and arbitrary commands are not represented."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "POLICY_ELIGIBLE",
+            "passed": true,
+            "reason": "Primary deterministic policy must require preauthorization."
+          }
+        ],
+        "decision": "AUTO_PREAUTHORIZED",
+        "created_by": "SYSTEM_POLICY"
+      },
+      "execution_steps": 3,
+      "verification": "6/6 PASS",
+      "audit_chain": "VALID",
+      "duration_ms": 312.76,
+      "node_timings_ms": {
+        "ingest_event": [
+          6.296
+        ],
+        "detect_signal": [
+          0.692
+        ],
+        "create_incident": [
+          3.491
+        ],
+        "plan_investigation": [
+          4.719
+        ],
+        "run_investigation": [
+          8.229
+        ],
+        "run_trace": [
+          8.86
+        ],
+        "evaluate_facts": [
+          10.145
+        ],
+        "build_action_plan": [
+          1.675
+        ],
+        "build_action_request": [
+          3.068
+        ],
+        "policy_check": [
+          2.606
+        ],
+        "autonomous_preauthorization": [
+          4.121
+        ],
+        "execute_action": [
+          18.135
+        ],
+        "verify_result": [
+          7.161
+        ],
+        "generate_audit": [
+          8.53
+        ],
+        "close_incident": [
+          5.25
+        ]
+      }
+    },
+    {
+      "run": 2,
+      "run_id": "run_01KZKX65JNYTSZ2Y6VMK2M0DXP",
+      "incident_id": "inc_01KZKX65JYCRFMH9FBEJHCRS15",
+      "approvals": 0,
+      "preauthorization": {
+        "schema_version": "1.0",
+        "created_at": "2026-08-09T18:39:58.601442Z",
+        "metadata": {},
+        "preauthorization_id": "paz_01KZKX65M9VCA4E1JG5SD02AEX",
+        "incident_id": "inc_01KZKX65JYCRFMH9FBEJHCRS15",
+        "action_request_id": "arq_01KZKX65M25Y758VEYT1NMA5N6",
+        "run_mode": "COMPETITION_AUTONOMOUS",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "environment": "SANDBOX",
+        "policy_version": "autonomous-sandbox-1.0",
+        "allowed_operations": [
+          "FREEZE_OLD_KEY",
+          "CREATE_NEW_KEY_VERSION",
+          "UPDATE_CI_BINDING"
+        ],
+        "request_digest": "2cad99b2e5a6fa049a8586d7bb908da178e2739b3b00713670190f06b43d10cd",
+        "guard_checks": [
+          {
+            "schema_version": "1.0",
+            "check_id": "RUN_MODE",
+            "passed": true,
+            "reason": "RunMode must be COMPETITION_AUTONOMOUS."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "EXPLICIT_CONFIG",
+            "passed": true,
+            "reason": "Competition autonomous execution must be explicitly enabled."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SANDBOX_ENVIRONMENT",
+            "passed": true,
+            "reason": "Only the local SANDBOX state service is eligible."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SCENARIO_ALLOWLIST",
+            "passed": true,
+            "reason": "Scenario must be in the frozen competition allowlist."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "ACTION_ALLOWLIST",
+            "passed": true,
+            "reason": "Only the credential containment plan is autonomous-eligible."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "OPERATION_ALLOWLIST",
+            "passed": true,
+            "reason": "Only the frozen three-step operation sequence is allowed."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "TARGET_SCOPE",
+            "passed": true,
+            "reason": "Target must belong to current incident facts."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "FACTS_COMPLETE",
+            "passed": true,
+            "reason": "All six evidence-validated facts are required."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SOURCE_SCOPE",
+            "passed": true,
+            "reason": "Autonomous facts may use only SYNTHETIC or MOCK evidence."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_PLAINTEXT_SECRET",
+            "passed": true,
+            "reason": "Request must contain references, never plaintext credentials."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_PRODUCTION_ADAPTER",
+            "passed": true,
+            "reason": "No production write adapter may be active."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_ARBITRARY_COMMAND",
+            "passed": true,
+            "reason": "Shell, subprocess and arbitrary commands are not represented."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "POLICY_ELIGIBLE",
+            "passed": true,
+            "reason": "Primary deterministic policy must require preauthorization."
+          }
+        ],
+        "decision": "AUTO_PREAUTHORIZED",
+        "created_by": "SYSTEM_POLICY"
+      },
+      "execution_steps": 3,
+      "verification": "6/6 PASS",
+      "audit_chain": "VALID",
+      "duration_ms": 270.59,
+      "node_timings_ms": {
+        "ingest_event": [
+          5.265
+        ],
+        "detect_signal": [
+          0.629
+        ],
+        "create_incident": [
+          2.603
+        ],
+        "plan_investigation": [
+          4.201
+        ],
+        "run_investigation": [
+          7.622
+        ],
+        "run_trace": [
+          8.365
+        ],
+        "evaluate_facts": [
+          9.953
+        ],
+        "build_action_plan": [
+          1.468
+        ],
+        "build_action_request": [
+          2.993
+        ],
+        "policy_check": [
+          2.303
+        ],
+        "autonomous_preauthorization": [
+          3.676
+        ],
+        "execute_action": [
+          17.118
+        ],
+        "verify_result": [
+          6.323
+        ],
+        "generate_audit": [
+          8.055
+        ],
+        "close_incident": [
+          4.966
+        ]
+      }
+    },
+    {
+      "run": 3,
+      "run_id": "run_01KZKX65T5590RV2JFDS0W78J9",
+      "incident_id": "inc_01KZKX65TFJE00EYJ0ZKEYC4Q2",
+      "approvals": 0,
+      "preauthorization": {
+        "schema_version": "1.0",
+        "created_at": "2026-08-09T18:39:58.845684Z",
+        "metadata": {},
+        "preauthorization_id": "paz_01KZKX65VXF15VGCCKCJ0VSVYX",
+        "incident_id": "inc_01KZKX65TFJE00EYJ0ZKEYC4Q2",
+        "action_request_id": "arq_01KZKX65VPN7KS7J13ZNDT9VC4",
+        "run_mode": "COMPETITION_AUTONOMOUS",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "environment": "SANDBOX",
+        "policy_version": "autonomous-sandbox-1.0",
+        "allowed_operations": [
+          "FREEZE_OLD_KEY",
+          "CREATE_NEW_KEY_VERSION",
+          "UPDATE_CI_BINDING"
+        ],
+        "request_digest": "3cf463cd390b0aae596b9d15eb6f006228a7c6c3197180a91c43f8e5ce143354",
+        "guard_checks": [
+          {
+            "schema_version": "1.0",
+            "check_id": "RUN_MODE",
+            "passed": true,
+            "reason": "RunMode must be COMPETITION_AUTONOMOUS."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "EXPLICIT_CONFIG",
+            "passed": true,
+            "reason": "Competition autonomous execution must be explicitly enabled."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SANDBOX_ENVIRONMENT",
+            "passed": true,
+            "reason": "Only the local SANDBOX state service is eligible."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SCENARIO_ALLOWLIST",
+            "passed": true,
+            "reason": "Scenario must be in the frozen competition allowlist."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "ACTION_ALLOWLIST",
+            "passed": true,
+            "reason": "Only the credential containment plan is autonomous-eligible."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "OPERATION_ALLOWLIST",
+            "passed": true,
+            "reason": "Only the frozen three-step operation sequence is allowed."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "TARGET_SCOPE",
+            "passed": true,
+            "reason": "Target must belong to current incident facts."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "FACTS_COMPLETE",
+            "passed": true,
+            "reason": "All six evidence-validated facts are required."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "SOURCE_SCOPE",
+            "passed": true,
+            "reason": "Autonomous facts may use only SYNTHETIC or MOCK evidence."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_PLAINTEXT_SECRET",
+            "passed": true,
+            "reason": "Request must contain references, never plaintext credentials."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_PRODUCTION_ADAPTER",
+            "passed": true,
+            "reason": "No production write adapter may be active."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "NO_ARBITRARY_COMMAND",
+            "passed": true,
+            "reason": "Shell, subprocess and arbitrary commands are not represented."
+          },
+          {
+            "schema_version": "1.0",
+            "check_id": "POLICY_ELIGIBLE",
+            "passed": true,
+            "reason": "Primary deterministic policy must require preauthorization."
+          }
+        ],
+        "decision": "AUTO_PREAUTHORIZED",
+        "created_by": "SYSTEM_POLICY"
+      },
+      "execution_steps": 3,
+      "verification": "6/6 PASS",
+      "audit_chain": "VALID",
+      "duration_ms": 248.58,
+      "node_timings_ms": {
+        "ingest_event": [
+          5.859
+        ],
+        "detect_signal": [
+          0.637
+        ],
+        "create_incident": [
+          2.713
+        ],
+        "plan_investigation": [
+          4.254
+        ],
+        "run_investigation": [
+          8.253
+        ],
+        "run_trace": [
+          8.76
+        ],
+        "evaluate_facts": [
+          11.093
+        ],
+        "build_action_plan": [
+          1.5
+        ],
+        "build_action_request": [
+          3.045
+        ],
+        "policy_check": [
+          2.379
+        ],
+        "autonomous_preauthorization": [
+          4.076
+        ],
+        "execute_action": [
+          17.591
+        ],
+        "verify_result": [
+          6.685
+        ],
+        "generate_audit": [
+          8.658
+        ],
+        "close_incident": [
+          5.113
+        ]
+      }
+    }
+  ]
+}

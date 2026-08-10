@@ -1,0 +1,15 @@
+{
+  "scope": "verified sample regression only; not whole-dataset accuracy",
+  "sample_count": 30,
+  "expected_matches": {
+    "nta-sqli": 8,
+    "nta-cmdi": 8,
+    "nta-webshell": 8,
+    "nta-dnslog": 6
+  },
+  "misses": {},
+  "limitations": [
+    "The set is selected and singly reviewed, not competition ground truth.",
+    "Encrypted, fragmented, and unsupported binary protocols may remain opaque."
+  ]
+}

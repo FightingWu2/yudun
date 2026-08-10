@@ -1,0 +1,116 @@
+from enum import StrEnum
+
+
+class SourceType(StrEnum):
+    OFFICIAL = "OFFICIAL"
+    SYNTHETIC = "SYNTHETIC"
+    MOCK = "MOCK"
+    SYSTEM = "SYSTEM"
+
+
+class IncidentStatus(StrEnum):
+    NEW = "NEW"
+    DETECTED = "DETECTED"
+    INVESTIGATING = "INVESTIGATING"
+    ATTRIBUTED = "ATTRIBUTED"
+    CONTAINED = "CONTAINED"
+    ROTATED = "ROTATED"
+    VERIFIED = "VERIFIED"
+    CLOSED = "CLOSED"
+
+
+class AutomationState(StrEnum):
+    ACTIVE = "ACTIVE"
+    AWAITING_APPROVAL = "AWAITING_APPROVAL"
+    MANUAL_REQUIRED = "MANUAL_REQUIRED"
+    PAUSED = "PAUSED"
+    FAILED_SAFE = "FAILED_SAFE"
+    COMPLETED = "COMPLETED"
+
+
+class Severity(StrEnum):
+    INFO = "INFO"
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+
+class TaskStatus(StrEnum):
+    PENDING = "PENDING"
+    RUNNING = "RUNNING"
+    COMPLETED = "COMPLETED"
+    PARTIAL = "PARTIAL"
+    FAILED = "FAILED"
+    DENIED = "DENIED"
+    MANUAL_REQUIRED = "MANUAL_REQUIRED"
+
+
+class ConfidenceLevel(StrEnum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+
+
+class SupportType(StrEnum):
+    SUPPORTS = "SUPPORTS"
+    CONTRADICTS = "CONTRADICTS"
+    INCONCLUSIVE = "INCONCLUSIVE"
+
+
+class FactSupportType(StrEnum):
+    DIRECT = "DIRECT"
+    CORROBORATED = "CORROBORATED"
+    INFERRED = "INFERRED"
+
+
+class EvidenceSensitivity(StrEnum):
+    PUBLIC = "PUBLIC"
+    INTERNAL = "INTERNAL"
+    SENSITIVE = "SENSITIVE"
+    RESTRICTED = "RESTRICTED"
+    SECRET = "SECRET"
+
+
+class ApprovalDecision(StrEnum):
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+
+
+class PolicyOutcome(StrEnum):
+    ALLOW_WITH_APPROVAL = "ALLOW_WITH_APPROVAL"
+    ALLOW_WITH_PREAUTHORIZATION = "ALLOW_WITH_PREAUTHORIZATION"
+    DENY = "DENY"
+
+
+class RunMode(StrEnum):
+    PRODUCTION_GUARDED = "PRODUCTION_GUARDED"
+    COMPETITION_AUTONOMOUS = "COMPETITION_AUTONOMOUS"
+
+
+class ResourceEnvironment(StrEnum):
+    SANDBOX = "SANDBOX"
+
+
+class PreAuthorizationDecision(StrEnum):
+    AUTO_PREAUTHORIZED = "AUTO_PREAUTHORIZED"
+    DENY = "DENY"
+
+
+class ExecutionStatus(StrEnum):
+    PENDING = "PENDING"
+    RUNNING = "RUNNING"
+    SUCCEEDED = "SUCCEEDED"
+    PARTIAL = "PARTIAL"
+    FAILED = "FAILED"
+    DENIED = "DENIED"
+    UNKNOWN = "UNKNOWN"
+
+
+class VerificationAssertionType(StrEnum):
+    OLD_KEY_DISABLED = "OLD_KEY_DISABLED"
+    OLD_KEY_CALL_REJECTED = "OLD_KEY_CALL_REJECTED"
+    MALICIOUS_ACTIVITY_STOPPED = "MALICIOUS_ACTIVITY_STOPPED"
+    NEW_KEY_ACTIVE = "NEW_KEY_ACTIVE"
+    LEGITIMATE_CI_RECOVERED = "LEGITIMATE_CI_RECOVERED"
+    HIGH_COST_RESOURCE_STOPPED = "HIGH_COST_RESOURCE_STOPPED"

@@ -1,0 +1,42 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.db
+*.db-shm
+*.db-wal
+backend/alembic/versions/__pycache__/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/test-results/
+frontend/playwright-report/
+
+# Large binary official NTA PCAP dataset — not versioned (kept locally)
+# data/knowledge/ (RAG import documents) IS versioned.
+data/*
+!data/knowledge/
+!data/knowledge/**
+
+# Runtime scratch / tool directories
+.runtime/
+.browser-data/
+.codex_tmp/
+.tmp/
+.workbuddy/
+
+# Local SSH key pair — NEVER commit (secret)
+wyt666999!
+wyt666999!.pub

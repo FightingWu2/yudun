@@ -1,0 +1,587 @@
+{
+  "generated_at": "2026-08-09T18:37:43.592Z",
+  "runs": [
+    {
+      "run_number": 1,
+      "run_id": "run_01KZKX1ZKPN0Q9SDKV5VG2PXJV",
+      "incident_id": "inc_01KZKX1ZKZZZCN7EJAE44FEVKR",
+      "start": "2026-08-09T18:37:41.366795Z",
+      "end": "2026-08-09T18:37:41.702211Z",
+      "duration_ms": 777.51,
+      "stage_durations_ms": {
+        "ingest_event": [
+          5.397
+        ],
+        "detect_signal": [
+          0.626
+        ],
+        "create_incident": [
+          2.378
+        ],
+        "plan_investigation": [
+          4.278
+        ],
+        "run_investigation": [
+          7.954
+        ],
+        "run_trace": [
+          8.367
+        ],
+        "evaluate_facts": [
+          10.277
+        ],
+        "build_action_plan": [
+          1.483
+        ],
+        "build_action_request": [
+          3.182
+        ],
+        "policy_check": [
+          2.479
+        ],
+        "wait_for_approval": [
+          0.315,
+          4.888
+        ],
+        "execute_action": [
+          23.694
+        ],
+        "verify_result": [
+          6.964
+        ],
+        "generate_audit": [
+          10.827
+        ],
+        "close_incident": [
+          6.083
+        ]
+      },
+      "objects": {
+        "signals": 1,
+        "tasks": 5,
+        "findings": 3,
+        "facts": 6,
+        "execution_steps": 3,
+        "audit_records": 44
+      },
+      "verification": {
+        "passed": 6,
+        "total": 6,
+        "assertions": [
+          {
+            "assertion_type": "OLD_KEY_DISABLED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX1ZXCBHQ04VA0QSZ62ZJY"
+            ]
+          },
+          {
+            "assertion_type": "OLD_KEY_CALL_REJECTED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX1ZXCBHQ04VA0QSZ62ZJY"
+            ]
+          },
+          {
+            "assertion_type": "MALICIOUS_ACTIVITY_STOPPED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX1ZXCBHQ04VA0QSZ62ZJY"
+            ]
+          },
+          {
+            "assertion_type": "NEW_KEY_ACTIVE",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX1ZXCBHQ04VA0QSZ62ZJY"
+            ]
+          },
+          {
+            "assertion_type": "LEGITIMATE_CI_RECOVERED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX1ZXCBHQ04VA0QSZ62ZJY"
+            ]
+          },
+          {
+            "assertion_type": "HIGH_COST_RESOURCE_STOPPED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX1ZXCBHQ04VA0QSZ62ZJY"
+            ]
+          }
+        ]
+      },
+      "mock_before_approval": {
+        "schema_version": "1.0",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "source_type": "MOCK",
+        "resource_environment": "SANDBOX",
+        "credential": {
+          "schema_version": "1.0",
+          "credential_ref": "credential_ref_demo_ci",
+          "old_version_status": "ACTIVE",
+          "new_version_status": "NOT_CREATED",
+          "active_version_ref": "credential_version_old_ref",
+          "updated_at": "2026-08-09T18:37:41.369496Z"
+        },
+        "attack": {
+          "schema_version": "1.0",
+          "malicious_source_ref": "source_external_203_0_113_50",
+          "old_key_attempt_enabled": true,
+          "last_attempt_result": "ALLOWED",
+          "last_attempt_at": "2026-08-09T18:37:41.369496Z"
+        },
+        "ci": {
+          "schema_version": "1.0",
+          "runner_ref": "runner_ci_01",
+          "bound_credential_version_ref": "credential_version_old_ref",
+          "last_build_status": "SUCCESS",
+          "updated_at": "2026-08-09T18:37:41.369496Z"
+        },
+        "resource": {
+          "schema_version": "1.0",
+          "high_cost_creation_enabled": true,
+          "abnormal_resource_count": 1,
+          "last_creation_result": "CREATED",
+          "updated_at": "2026-08-09T18:37:41.369496Z"
+        },
+        "version": 1
+      },
+      "mock_after_execution": {
+        "schema_version": "1.0",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "source_type": "MOCK",
+        "resource_environment": "SANDBOX",
+        "credential": {
+          "schema_version": "1.0",
+          "credential_ref": "credential_ref_demo_ci",
+          "old_version_status": "FROZEN",
+          "new_version_status": "ACTIVE",
+          "active_version_ref": "credential_version_new_ref",
+          "updated_at": "2026-08-09T18:37:41.669143Z"
+        },
+        "attack": {
+          "schema_version": "1.0",
+          "malicious_source_ref": "source_external_203_0_113_50",
+          "old_key_attempt_enabled": false,
+          "last_attempt_result": "DENIED",
+          "last_attempt_at": "2026-08-09T18:37:41.655974Z"
+        },
+        "ci": {
+          "schema_version": "1.0",
+          "runner_ref": "runner_ci_01",
+          "bound_credential_version_ref": "credential_version_new_ref",
+          "last_build_status": "SUCCESS",
+          "updated_at": "2026-08-09T18:37:41.669143Z"
+        },
+        "resource": {
+          "schema_version": "1.0",
+          "high_cost_creation_enabled": false,
+          "abnormal_resource_count": 1,
+          "last_creation_result": "DENIED",
+          "updated_at": "2026-08-09T18:37:41.655974Z"
+        },
+        "version": 4
+      },
+      "audit_status": "VALID",
+      "source_types": [
+        "OFFICIAL",
+        "SYNTHETIC",
+        "MOCK",
+        "SYSTEM"
+      ],
+      "model_provider": "DETERMINISTIC_TEST",
+      "run_mode": "PRODUCTION_GUARDED",
+      "test_result": "PASS"
+    },
+    {
+      "run_number": 2,
+      "run_id": "run_01KZKX20BZ5578J47ZV5HTNY5G",
+      "incident_id": "inc_01KZKX20C86VH84A1Z21TPYEYA",
+      "start": "2026-08-09T18:37:42.143099Z",
+      "end": "2026-08-09T18:37:42.407142Z",
+      "duration_ms": 627.61,
+      "stage_durations_ms": {
+        "ingest_event": [
+          6.312
+        ],
+        "detect_signal": [
+          0.754
+        ],
+        "create_incident": [
+          2.35
+        ],
+        "plan_investigation": [
+          4.186
+        ],
+        "run_investigation": [
+          7.794
+        ],
+        "run_trace": [
+          8.611
+        ],
+        "evaluate_facts": [
+          9.871
+        ],
+        "build_action_plan": [
+          1.489
+        ],
+        "build_action_request": [
+          2.979
+        ],
+        "policy_check": [
+          2.693
+        ],
+        "wait_for_approval": [
+          0.298,
+          3.497
+        ],
+        "execute_action": [
+          21.441
+        ],
+        "verify_result": [
+          8.524
+        ],
+        "generate_audit": [
+          9.721
+        ],
+        "close_incident": [
+          7.167
+        ]
+      },
+      "objects": {
+        "signals": 1,
+        "tasks": 5,
+        "findings": 3,
+        "facts": 6,
+        "execution_steps": 3,
+        "audit_records": 44
+      },
+      "verification": {
+        "passed": 6,
+        "total": 6,
+        "assertions": [
+          {
+            "assertion_type": "OLD_KEY_DISABLED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX20KBAZA24X96ZSCSJ6N7"
+            ]
+          },
+          {
+            "assertion_type": "OLD_KEY_CALL_REJECTED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX20KBAZA24X96ZSCSJ6N7"
+            ]
+          },
+          {
+            "assertion_type": "MALICIOUS_ACTIVITY_STOPPED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX20KBAZA24X96ZSCSJ6N7"
+            ]
+          },
+          {
+            "assertion_type": "NEW_KEY_ACTIVE",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX20KBAZA24X96ZSCSJ6N7"
+            ]
+          },
+          {
+            "assertion_type": "LEGITIMATE_CI_RECOVERED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX20KBAZA24X96ZSCSJ6N7"
+            ]
+          },
+          {
+            "assertion_type": "HIGH_COST_RESOURCE_STOPPED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX20KBAZA24X96ZSCSJ6N7"
+            ]
+          }
+        ]
+      },
+      "mock_before_approval": {
+        "schema_version": "1.0",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "source_type": "MOCK",
+        "resource_environment": "SANDBOX",
+        "credential": {
+          "schema_version": "1.0",
+          "credential_ref": "credential_ref_demo_ci",
+          "old_version_status": "ACTIVE",
+          "new_version_status": "NOT_CREATED",
+          "active_version_ref": "credential_version_old_ref",
+          "updated_at": "2026-08-09T18:37:42.145579Z"
+        },
+        "attack": {
+          "schema_version": "1.0",
+          "malicious_source_ref": "source_external_203_0_113_50",
+          "old_key_attempt_enabled": true,
+          "last_attempt_result": "ALLOWED",
+          "last_attempt_at": "2026-08-09T18:37:42.145579Z"
+        },
+        "ci": {
+          "schema_version": "1.0",
+          "runner_ref": "runner_ci_01",
+          "bound_credential_version_ref": "credential_version_old_ref",
+          "last_build_status": "SUCCESS",
+          "updated_at": "2026-08-09T18:37:42.145579Z"
+        },
+        "resource": {
+          "schema_version": "1.0",
+          "high_cost_creation_enabled": true,
+          "abnormal_resource_count": 1,
+          "last_creation_result": "CREATED",
+          "updated_at": "2026-08-09T18:37:42.145579Z"
+        },
+        "version": 1
+      },
+      "mock_after_execution": {
+        "schema_version": "1.0",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "source_type": "MOCK",
+        "resource_environment": "SANDBOX",
+        "credential": {
+          "schema_version": "1.0",
+          "credential_ref": "credential_ref_demo_ci",
+          "old_version_status": "FROZEN",
+          "new_version_status": "ACTIVE",
+          "active_version_ref": "credential_version_new_ref",
+          "updated_at": "2026-08-09T18:37:42.372409Z"
+        },
+        "attack": {
+          "schema_version": "1.0",
+          "malicious_source_ref": "source_external_203_0_113_50",
+          "old_key_attempt_enabled": false,
+          "last_attempt_result": "DENIED",
+          "last_attempt_at": "2026-08-09T18:37:42.360621Z"
+        },
+        "ci": {
+          "schema_version": "1.0",
+          "runner_ref": "runner_ci_01",
+          "bound_credential_version_ref": "credential_version_new_ref",
+          "last_build_status": "SUCCESS",
+          "updated_at": "2026-08-09T18:37:42.372409Z"
+        },
+        "resource": {
+          "schema_version": "1.0",
+          "high_cost_creation_enabled": false,
+          "abnormal_resource_count": 1,
+          "last_creation_result": "DENIED",
+          "updated_at": "2026-08-09T18:37:42.360621Z"
+        },
+        "version": 4
+      },
+      "audit_status": "VALID",
+      "source_types": [
+        "OFFICIAL",
+        "SYNTHETIC",
+        "MOCK",
+        "SYSTEM"
+      ],
+      "model_provider": "DETERMINISTIC_TEST",
+      "run_mode": "PRODUCTION_GUARDED",
+      "test_result": "PASS"
+    },
+    {
+      "run_number": 3,
+      "run_id": "run_01KZKX210FN38DDSZ8CD0ZP2MT",
+      "incident_id": "inc_01KZKX210RW63858MDCNJGFPET",
+      "start": "2026-08-09T18:37:42.799348Z",
+      "end": "2026-08-09T18:37:43.264331Z",
+      "duration_ms": 988.31,
+      "stage_durations_ms": {
+        "ingest_event": [
+          5.724
+        ],
+        "detect_signal": [
+          0.634
+        ],
+        "create_incident": [
+          2.432
+        ],
+        "plan_investigation": [
+          3.975
+        ],
+        "run_investigation": [
+          7.501
+        ],
+        "run_trace": [
+          8.685
+        ],
+        "evaluate_facts": [
+          10.057
+        ],
+        "build_action_plan": [
+          1.458
+        ],
+        "build_action_request": [
+          3.024
+        ],
+        "policy_check": [
+          2.465
+        ],
+        "wait_for_approval": [
+          0.334,
+          5.33
+        ],
+        "execute_action": [
+          20.8
+        ],
+        "verify_result": [
+          6.886
+        ],
+        "generate_audit": [
+          8.408
+        ],
+        "close_incident": [
+          5.029
+        ]
+      },
+      "objects": {
+        "signals": 1,
+        "tasks": 5,
+        "findings": 3,
+        "facts": 6,
+        "execution_steps": 3,
+        "audit_records": 44
+      },
+      "verification": {
+        "passed": 6,
+        "total": 6,
+        "assertions": [
+          {
+            "assertion_type": "OLD_KEY_DISABLED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX21E991W5ZWCMW3R5851T"
+            ]
+          },
+          {
+            "assertion_type": "OLD_KEY_CALL_REJECTED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX21E991W5ZWCMW3R5851T"
+            ]
+          },
+          {
+            "assertion_type": "MALICIOUS_ACTIVITY_STOPPED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX21E991W5ZWCMW3R5851T"
+            ]
+          },
+          {
+            "assertion_type": "NEW_KEY_ACTIVE",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX21E991W5ZWCMW3R5851T"
+            ]
+          },
+          {
+            "assertion_type": "LEGITIMATE_CI_RECOVERED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX21E991W5ZWCMW3R5851T"
+            ]
+          },
+          {
+            "assertion_type": "HIGH_COST_RESOURCE_STOPPED",
+            "passed": true,
+            "evidence_refs": [
+              "evd_01KZKX21E991W5ZWCMW3R5851T"
+            ]
+          }
+        ]
+      },
+      "mock_before_approval": {
+        "schema_version": "1.0",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "source_type": "MOCK",
+        "resource_environment": "SANDBOX",
+        "credential": {
+          "schema_version": "1.0",
+          "credential_ref": "credential_ref_demo_ci",
+          "old_version_status": "ACTIVE",
+          "new_version_status": "NOT_CREATED",
+          "active_version_ref": "credential_version_old_ref",
+          "updated_at": "2026-08-09T18:37:42.802028Z"
+        },
+        "attack": {
+          "schema_version": "1.0",
+          "malicious_source_ref": "source_external_203_0_113_50",
+          "old_key_attempt_enabled": true,
+          "last_attempt_result": "ALLOWED",
+          "last_attempt_at": "2026-08-09T18:37:42.802028Z"
+        },
+        "ci": {
+          "schema_version": "1.0",
+          "runner_ref": "runner_ci_01",
+          "bound_credential_version_ref": "credential_version_old_ref",
+          "last_build_status": "SUCCESS",
+          "updated_at": "2026-08-09T18:37:42.802028Z"
+        },
+        "resource": {
+          "schema_version": "1.0",
+          "high_cost_creation_enabled": true,
+          "abnormal_resource_count": 1,
+          "last_creation_result": "CREATED",
+          "updated_at": "2026-08-09T18:37:42.802028Z"
+        },
+        "version": 1
+      },
+      "mock_after_execution": {
+        "schema_version": "1.0",
+        "scenario_id": "scenario_api_key_compromise_v1",
+        "source_type": "MOCK",
+        "resource_environment": "SANDBOX",
+        "credential": {
+          "schema_version": "1.0",
+          "credential_ref": "credential_ref_demo_ci",
+          "old_version_status": "FROZEN",
+          "new_version_status": "ACTIVE",
+          "active_version_ref": "credential_version_new_ref",
+          "updated_at": "2026-08-09T18:37:43.234470Z"
+        },
+        "attack": {
+          "schema_version": "1.0",
+          "malicious_source_ref": "source_external_203_0_113_50",
+          "old_key_attempt_enabled": false,
+          "last_attempt_result": "DENIED",
+          "last_attempt_at": "2026-08-09T18:37:43.224107Z"
+        },
+        "ci": {
+          "schema_version": "1.0",
+          "runner_ref": "runner_ci_01",
+          "bound_credential_version_ref": "credential_version_new_ref",
+          "last_build_status": "SUCCESS",
+          "updated_at": "2026-08-09T18:37:43.234470Z"
+        },
+        "resource": {
+          "schema_version": "1.0",
+          "high_cost_creation_enabled": false,
+          "abnormal_resource_count": 1,
+          "last_creation_result": "DENIED",
+          "updated_at": "2026-08-09T18:37:43.224107Z"
+        },
+        "version": 4
+      },
+      "audit_status": "VALID",
+      "source_types": [
+        "OFFICIAL",
+        "SYNTHETIC",
+        "MOCK",
+        "SYSTEM"
+      ],
+      "model_provider": "DETERMINISTIC_TEST",
+      "run_mode": "PRODUCTION_GUARDED",
+      "test_result": "PASS"
+    }
+  ]
+}

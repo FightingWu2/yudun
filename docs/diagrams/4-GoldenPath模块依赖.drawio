@@ -1,0 +1,32 @@
+<mxfile host="app.diagrams.net" modified="2026-08-09T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="golden-path" name="GoldenPath模块依赖">
+    <mxGraphModel dx="1800" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="御盾智核 · Golden Path 模块依赖" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="520" y="20" width="760" height="50" as="geometry"/></mxCell>
+        <mxCell id="base" value="贯穿基础&#xa;Schema · ID · 来源标签&#xa;Evidence ACL · Audit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;fontColor=#0F172A;fontSize=15;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="60" y="350" width="230" height="130" as="geometry"/></mxCell>
+        <mxCell id="ingest" value="1 数据接入&#xa;PCAP / Synthetic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="360" y="120" width="210" height="100" as="geometry"/></mxCell>
+        <mxCell id="detect" value="2 检测与 Signal&#xa;规则 / 静默监测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="650" y="120" width="210" height="100" as="geometry"/></mxCell>
+        <mxCell id="incident" value="3 Incident / 状态中枢&#xa;确定性状态机" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="940" y="120" width="230" height="100" as="geometry"/></mxCell>
+        <mxCell id="agent" value="4 LangGraph + Agent&#xa;调查 · 溯源 · Fact" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="1260" y="120" width="230" height="100" as="geometry"/></mxCell>
+        <mxCell id="request" value="5 建议与动作申请&#xa;Recommendation / Request" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="1260" y="400" width="230" height="100" as="geometry"/></mxCell>
+        <mxCell id="guard" value="6 确定性守卫&#xa;Policy + Human Approval" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#EA580C;fontColor=#0F172A;fontSize=15;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="940" y="400" width="230" height="100" as="geometry"/></mxCell>
+        <mxCell id="execute" value="7 受控执行&#xa;Mock Executor / Snapshot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFBF1;strokeColor=#0F766E;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="650" y="400" width="210" height="100" as="geometry"/></mxCell>
+        <mxCell id="verify" value="8 恢复验证与审计&#xa;6 Assertions / UI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;fontColor=#0F172A;fontSize=15;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="360" y="400" width="210" height="100" as="geometry"/></mxCell>
+        <mxCell id="rule" value="编码依赖从 1 到 8；基础能力先行，UI 与模型增强后置" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;fontColor=#334155;fontSize=14;dashed=1;" vertex="1" parent="1"><mxGeometry x="650" y="650" width="520" height="70" as="geometry"/></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2563EB;endArrow=block;endFill=1;" edge="1" parent="1" source="ingest" target="detect"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#D97706;endArrow=block;endFill=1;" edge="1" parent="1" source="detect" target="incident"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7C3AED;endArrow=block;endFill=1;" edge="1" parent="1" source="incident" target="agent"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0284C7;endArrow=block;endFill=1;" edge="1" parent="1" source="agent" target="request"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#E11D48;endArrow=block;endFill=1;" edge="1" parent="1" source="request" target="guard"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#EA580C;endArrow=block;endFill=1;" edge="1" parent="1" source="guard" target="execute"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0F766E;endArrow=block;endFill=1;" edge="1" parent="1" source="execute" target="verify"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="base" target="ingest"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="base" target="incident"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="base" target="guard"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="b4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#64748B;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="base" target="verify"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

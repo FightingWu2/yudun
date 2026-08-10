@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-08-09T18:37:57Z",
+  "status": "PASS",
+  "checks": {
+    "python": {
+      "pass": true,
+      "version": "3.11.15"
+    },
+    "node": {
+      "pass": true,
+      "version": "v24.15.0"
+    },
+    "npm": {
+      "pass": true,
+      "version": "11.12.1"
+    },
+    "dependencies": {
+      "pass": true,
+      "fastapi": "0.141.1",
+      "pydantic": "2.13.4",
+      "sqlalchemy": "2.0.51",
+      "langgraph": "1.2.10"
+    },
+    "ports": {
+      "pass": true,
+      "8000": true,
+      "5173": true
+    },
+    "database_paths": {
+      "pass": true,
+      "business_db_writable": true,
+      "checkpoints_db_writable": true
+    },
+    "official_manifest": {
+      "pass": true,
+      "path": "/Users/wyt/compete/win/artifacts/official_dataset_manifest.json",
+      "captures": 2337
+    },
+    "verified_sample_set": {
+      "pass": true,
+      "path": "/Users/wyt/compete/win/artifacts/verified_sample_set.json",
+      "samples": 30
+    },
+    "frontend_build": {
+      "pass": true,
+      "path": "/Users/wyt/compete/win/frontend/dist"
+    },
+    "browser": {
+      "pass": true,
+      "engine": "Playwright Chromium",
+      "installations": 3
+    },
+    "screen": {
+      "pass": true,
+      "detected_resolutions": [
+        "1920 x 1080 (1080p FHD - Full High Definition)"
+      ],
+      "browser_viewports_to_validate": [
+        "1280x720",
+        "1440x900"
+      ]
+    },
+    "model_config": {
+      "pass": false,
+      "providers": {
+        "DEEPSEEK": {
+          "DEEPSEEK_API_KEY": false,
+          "DEEPSEEK_BASE_URL": false,
+          "DEEPSEEK_MODEL": false
+        },
+        "QWEN": {
+          "QWEN_API_KEY": false,
+          "QWEN_BASE_URL": false,
+          "QWEN_MODEL": false
+        }
+      },
+      "fallback": "DETERMINISTIC_TEST"
+    },
+    "network": {
+      "pass": true,
+      "internet_required_for_demo": false,
+      "dns": "AVAILABLE",
+      "outbound_tcp_443": "UNAVAILABLE",
+      "offline_fallback": "DETERMINISTIC_TEST + OFFICIAL + SYNTHETIC + MOCK"
+    },
+    "disk": {
+      "pass": true,
+      "free_gib": 4.1,
+      "warning": "LOW"
+    },
+    "secret_scan": {
+      "pass": true,
+      "result": "Secret scan passed: no plaintext credential patterns in source, bundle, runtime database, logs, or test artifacts.",
+      "duration_ms": 101.18
+    }
+  },
+  "timings_ms": {
+    "backend_cold_import": 790.87,
+    "preflight_total": 3430.19
+  },
+  "truthful_limitations": [
+    "Real-model checks remain BLOCKED_CONFIG when provider variables are absent.",
+    "Sangfor integration remains PENDING EXTERNAL INTERFACE.",
+    "Network availability is informational; deterministic demo is offline-capable."
+  ]
+}

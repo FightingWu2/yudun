@@ -1,0 +1,672 @@
+{
+  "set_version": "1.0",
+  "purpose": "human-reviewed development and regression samples; not training ground truth",
+  "counts": {
+    "SQL_INJECTION": 8,
+    "COMMAND_INJECTION": 8,
+    "WEBSHELL_RCE": 8,
+    "DNSLOG": 6
+  },
+  "samples": [
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_dc63c7f49133cd82eb748b6b",
+      "capture_id": "cap_a9b96f764bc7974b42baaaf4",
+      "display_name": "14.mssql_union_tuoku.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bunion\\\\s+(?:all\\\\s+)?select\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_a9b96f764bc7974b42baaaf4",
+        "packet_indexes": [
+          199
+        ],
+        "flow_id": "flw_8416f9716a9ed6c8f660dc2a",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_a4287b898117dfdeeb1a5ffe",
+      "capture_id": "cap_a2926155ca90767a98230c88",
+      "display_name": "16.mssql_error_insert_select.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bunion\\\\s+(?:all\\\\s+)?select\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_a2926155ca90767a98230c88",
+        "packet_indexes": [
+          753
+        ],
+        "flow_id": "flw_abce4ea0790a844500c5b387",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_ba6a2926a86a6e0ec9746ed6",
+      "capture_id": "cap_0341f0ecbeecb303c6bfc968",
+      "display_name": "18.mysql_time_tuoku.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\b(?:sleep|benchmark|waitfor\\\\s+delay)\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_0341f0ecbeecb303c6bfc968",
+        "packet_indexes": [
+          627
+        ],
+        "flow_id": "flw_1e3643eb98a1c1f268cd3ec7",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_82c79117191a786331f8f835",
+      "capture_id": "cap_05161cc3c6d6358dcf3a7334",
+      "display_name": "19.mysql_union_tuoku.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bunion\\\\s+(?:all\\\\s+)?select\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_05161cc3c6d6358dcf3a7334",
+        "packet_indexes": [
+          227
+        ],
+        "flow_id": "flw_f6ecef007df2fc52b3fd72ac",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_0e5c77f25a8306dac6ee0ea5",
+      "capture_id": "cap_1119887b73f0d3be176d1397",
+      "display_name": "5.postgresql_insert_select.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bunion\\\\s+(?:all\\\\s+)?select\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_1119887b73f0d3be176d1397",
+        "packet_indexes": [
+          135
+        ],
+        "flow_id": "flw_66833cc79d1ee07af95ce566",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_6671864a74eda071273bbf18",
+      "capture_id": "cap_48a293371420dd9b376358d8",
+      "display_name": "6.mysql_write_webshell_antsword.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bunion\\\\s+(?:all\\\\s+)?select\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_48a293371420dd9b376358d8",
+        "packet_indexes": [
+          27
+        ],
+        "flow_id": "flw_71d3cfb81fe71b47ae53f130",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_acbbaa2027889e544d1d11b0",
+      "capture_id": "cap_24501554ac6f6daab0ace924",
+      "display_name": "algo_mssql_oob_xp_fileexist_dnslog#ns(10.100.15.254),wd(10.100.13.25).pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\b(?:xp_dirtree|xp_fileexist|xp_subdirs)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_24501554ac6f6daab0ace924",
+        "packet_indexes": [
+          61
+        ],
+        "flow_id": "flw_97226d360a48c5ec32499af9",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_fe874f29c00692b09153d624",
+      "capture_id": "cap_2b52de70c9d9c2aed62ab8ce",
+      "display_name": "mssql_oob_xp_dirtree_dnslog.pcap",
+      "human_label": "SQL_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\b(?:xp_dirtree|xp_fileexist|xp_subdirs)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_2b52de70c9d9c2aed62ab8ce",
+        "packet_indexes": [
+          41
+        ],
+        "flow_id": "flw_2177cd9d79274f76fa57390a",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_b75ed00189278bd991a39d07",
+      "capture_id": "cap_f473a46d7333c8ac86c8216b",
+      "display_name": "用友NC6.5_BshServlet_远程命令执行漏洞_CNVD-2021-30167.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bbsh\\\\.script\\\\s*=\\\\s*exec\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_f473a46d7333c8ac86c8216b",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_ee7008b1498d6668a57bd892",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_2bbeacadaa45de5374aee838",
+      "capture_id": "cap_d4bb5289d259d63eefe6ebf8",
+      "display_name": "Response_Code_high_id_Struts2_rce_10_Struts2_046_attack_01.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bprocessbuilder\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_d4bb5289d259d63eefe6ebf8",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_326f6fc7dce55f006a116b18",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_fac68f2510e01ed27e7e1eff",
+      "capture_id": "cap_1ae2886e1b235f6e5813da71",
+      "display_name": "Response_Code_high_ifconfig_ThinkPHP_v5015_rce_7.5_real_CNVD_2019_04930_attack.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|[?&\\\\s])(?:c=system|xxxxx=passthru)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_1ae2886e1b235f6e5813da71",
+        "packet_indexes": [
+          4
+        ],
+        "flow_id": "flw_040a819d5683fb68be5a910e",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_d0280329da21aaa82bf7260e",
+      "capture_id": "cap_17db47b4343518db331d380b",
+      "display_name": "Struts2_rce_10_real_Struts2_007_attack_01.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:runtime|getruntime)\\\\s*\\\\([^)]*\\\\)\\\\s*\\\\.exec\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_17db47b4343518db331d380b",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_23655f44cf8451d6174b8a63",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_91723db7955cca11b1526572",
+      "capture_id": "cap_d71f817ece9bf09be1cd9325",
+      "display_name": "Struts2_rce_10_real_Struts2_019_attack_01.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '\\\\bprocessbuilder\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_d71f817ece9bf09be1cd9325",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_245ba2c31d1a3a0ffce4beba",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_17ffb57a2365a5c988038044",
+      "capture_id": "cap_1830eacd4c9823acb286b2a1",
+      "display_name": "Struts2_rce_5_real_Struts2_005_attack_01.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:runtime|getruntime)\\\\s*\\\\([^)]*\\\\)\\\\s*\\\\.exec\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_1830eacd4c9823acb286b2a1",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_7f94d837fe9852f56731f6d4",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_54c708a4bba0ab62eb76f01d",
+      "capture_id": "cap_d5caf7e61cb0b11bf7310a0e",
+      "display_name": "Struts2_rce_7.5_real_Struts2_033_attack.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:runtime|getruntime)\\\\s*\\\\([^)]*\\\\)\\\\s*\\\\.exec\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_d5caf7e61cb0b11bf7310a0e",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_5d54214c79cdf1424661e98f",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_11ecc5cf93fde79280cc72ff",
+      "capture_id": "cap_f40f3596e4e2a0755e5b3dd9",
+      "display_name": "Struts2_rce_7.5_real_Struts2_037_attack.pcap",
+      "human_label": "COMMAND_INJECTION",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:runtime|getruntime)\\\\s*\\\\([^)]*\\\\)\\\\s*\\\\.exec\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_f40f3596e4e2a0755e5b3dd9",
+        "packet_indexes": [
+          5
+        ],
+        "flow_id": "flw_23583f8b2ec985442efb6c84",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_b0b154f73b5caef2afb2c3ec",
+      "capture_id": "cap_ca45bcf11d3edebbd46eb6f6",
+      "display_name": "41283-webshell The Three Musketeers jspspy Command Execution.pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '/(?:[\\\\w-]*shell|jsp_[a-z]+|ws\\\\d+|jspspy)\\\\.(?:jsp|php|asp|aspx)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_ca45bcf11d3edebbd46eb6f6",
+        "packet_indexes": [
+          4
+        ],
+        "flow_id": "flw_8d2debfa6850194cd2eaeaf2",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_573c301903a27d51c7e317a6",
+      "capture_id": "cap_4682cf43afa4010c17c189c3",
+      "display_name": "41284-webshell The Three Musketeers phpspy Command Execution.pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '/(?:[\\\\w-]*shell|jsp_[a-z]+|ws\\\\d+|jspspy)\\\\.(?:jsp|php|asp|aspx)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_4682cf43afa4010c17c189c3",
+        "packet_indexes": [
+          4
+        ],
+        "flow_id": "flw_ac3e9ab7c7a63162079b9099",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_18dfce714d43022d17839ad7",
+      "capture_id": "cap_6b96362759cf2a2ef932c4df",
+      "display_name": "mysql_phpmyadmin_general_log_on_and_webshell_192.168.10.11.pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '<\\\\?php\\\\s+@?eval\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_6b96362759cf2a2ef932c4df",
+        "packet_indexes": [
+          17
+        ],
+        "flow_id": "flw_dbcc4ac27e77c2978ea3f849",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_23dc6aee300e5071606e21e2",
+      "capture_id": "cap_abd9323a5958a2cbb1cd9ef0",
+      "display_name": "s2-045_weblogic_exec_webshell_192.168.10.46_192.168.10.123.pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '/(?:[\\\\w-]*shell|jsp_[a-z]+|ws\\\\d+|jspspy)\\\\.(?:jsp|php|asp|aspx)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_abd9323a5958a2cbb1cd9ef0",
+        "packet_indexes": [
+          85
+        ],
+        "flow_id": "flw_9cf0e5536dc7694eaaee7ded",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_44de6aa4f36227ec1106dd77",
+      "capture_id": "cap_6b0a45c2128fecf2836ea4b0",
+      "display_name": "shiro550_webshell_CommonsCollections2_10.100.4.101.pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '/(?:[\\\\w-]*shell|jsp_[a-z]+|ws\\\\d+|jspspy)\\\\.(?:jsp|php|asp|aspx)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_6b0a45c2128fecf2836ea4b0",
+        "packet_indexes": [
+          44
+        ],
+        "flow_id": "flw_302a3a59bbc2a09f1e5d6f48",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_068c2e901213a407592e1279",
+      "capture_id": "cap_f5b907f482a227c53f500efd",
+      "display_name": "shiro550_webshell_noCC_10.100.4.101.pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '/(?:[\\\\w-]*shell|jsp_[a-z]+|ws\\\\d+|jspspy)\\\\.(?:jsp|php|asp|aspx)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_f5b907f482a227c53f500efd",
+        "packet_indexes": [
+          34
+        ],
+        "flow_id": "flw_3d907e7233c277e3ac8ecca6",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_f4f0b1f5629f0239d3ce499b",
+      "capture_id": "cap_caee90802c3fb6794826d587",
+      "display_name": "sqlwebshell#ns(10.5.72.34),wd(200.200.152.252).pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '<\\\\?php\\\\s+@?eval\\\\s*\\\\(' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_caee90802c3fb6794826d587",
+        "packet_indexes": [
+          7
+        ],
+        "flow_id": "flw_ffcc31a978dd391a5f391ef1",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_6495f26af620ae84961c8f79",
+      "capture_id": "cap_a44e5f7e1deea507324f0b73",
+      "display_name": "下载webshell_s2-007_payload_whoami_ls-l_ifconfig_pwd_curl_#ns(10.100.4.94),wd(10.100.4.101).pcap",
+      "human_label": "WEBSHELL_RCE",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '/(?:[\\\\w-]*shell|jsp_[a-z]+|ws\\\\d+|jspspy)\\\\.(?:jsp|php|asp|aspx)\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_a44e5f7e1deea507324f0b73",
+        "packet_indexes": [
+          14
+        ],
+        "flow_id": "flw_121bda3412d0a8bb1fdc7cd7",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_e98213b8398672840503abcd",
+      "capture_id": "cap_0356491ca5107766e8c37cda",
+      "display_name": "ElasticSearch_cve-2014-3120_探测_curl_dnslog_mvel_10.100.4.90.pcap",
+      "human_label": "DNSLOG",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|\\\\.)ceye\\\\.io\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_0356491ca5107766e8c37cda",
+        "packet_indexes": [
+          4
+        ],
+        "flow_id": "flw_6f2c264f1f048fed2e9587f2",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_c57e20499dd5aa77d1cd34df",
+      "capture_id": "cap_3e1b21eddaaf6200dd601aaf",
+      "display_name": "ElasticSearch_cve-2015-1427_探测_curl_dnslog_groovy_10.100.4.90.pcap",
+      "human_label": "DNSLOG",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|\\\\.)ceye\\\\.io\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_3e1b21eddaaf6200dd601aaf",
+        "packet_indexes": [
+          4
+        ],
+        "flow_id": "flw_c27f180e4b31a18c810e0539",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_917715f11c70a9460436ecd3",
+      "capture_id": "cap_a28e6aa27404f50daef27466",
+      "display_name": "fastjson_cve_2017_18349_dnslog#ns(192.168.31.175),wd(192.168.31.74).pcap",
+      "human_label": "DNSLOG",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|\\\\.)dnslog\\\\.cn\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_a28e6aa27404f50daef27466",
+        "packet_indexes": [
+          4
+        ],
+        "flow_id": "flw_fbfa0b0be555f58e5fed9482",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_a601d7093e3cd9e7d13305be",
+      "capture_id": "cap_fd2f4a82eff81ee18a872c31",
+      "display_name": "fastjson_cve_2017_18349_dnslog_class#ns(192.168.31.175),wd(192.168.31.74).pcap",
+      "human_label": "DNSLOG",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|\\\\.)dnslog\\\\.cn\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_fd2f4a82eff81ee18a872c31",
+        "packet_indexes": [
+          11
+        ],
+        "flow_id": "flw_8a89f2060b0038581e8ef98b",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_0aff597aef395211df36893f",
+      "capture_id": "cap_8c6132beb65fe31fa61ad4a4",
+      "display_name": "mssql_dnslog_xp_dirtree_192.168.10.11.pcap",
+      "human_label": "DNSLOG",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|\\\\.)ceye\\\\.io\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_8c6132beb65fe31fa61ad4a4",
+        "packet_indexes": [
+          7
+        ],
+        "flow_id": "flw_6cf3dec5c7edf4d187e258ac",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    },
+    {
+      "schema_version": "1.0",
+      "sample_id": "snp_94eeaac4a2de704bfb8651b2",
+      "capture_id": "cap_c1a6c64af0fecf4e1c1dce49",
+      "display_name": "mssql_dnslog_xp_subdirs_192.168.10.11.pcap",
+      "human_label": "DNSLOG",
+      "label_basis": "Single reviewer inspected decoded packet content at the recorded locator; governed condition '(?:^|\\\\.)ceye\\\\.io\\\\b' is visible in that content.",
+      "evidence_locator": {
+        "schema_version": "1.0",
+        "locator_type": "OFFICIAL",
+        "capture_id": "cap_c1a6c64af0fecf4e1c1dce49",
+        "packet_indexes": [
+          40
+        ],
+        "flow_id": "flw_225c56b74670f4bccec513a0",
+        "field_path": null
+      },
+      "review_status": "SINGLE_REVIEWED",
+      "review_notes": "Filename was candidate-selection context only; label rests on packet content.",
+      "reviewed_at": "2026-08-09T16:49:11.632600Z",
+      "reviewer_count": 1
+    }
+  ]
+}

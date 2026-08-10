@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2026-08-09T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="schema-overview" name="核心Schema总览">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="御盾智核 · 核心 Schema 关系总览" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="430" y="20" width="740" height="50" as="geometry"/></mxCell>
+        <mxCell id="source" value="数据与证据&#xa;Capture / RawEvent / Flow&#xa;EvidenceReference" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="70" y="150" width="240" height="120" as="geometry"/></mxCell>
+        <mxCell id="signal" value="SecuritySignal&#xa;异常线索，不等于事实" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="150" width="230" height="120" as="geometry"/></mxCell>
+        <mxCell id="incident" value="SecurityIncident&#xa;结构化 Single Source of Truth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontColor=#0F172A;fontSize=15;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="710" y="150" width="270" height="120" as="geometry"/></mxCell>
+        <mxCell id="task" value="AgentTask → AgentResult&#xa;→ AgentFinding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="1070" y="150" width="250" height="120" as="geometry"/></mxCell>
+        <mxCell id="fact" value="ConfirmedFact&#xa;确定性校验 + Evidence 引用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="390" y="400" width="230" height="120" as="geometry"/></mxCell>
+        <mxCell id="action" value="Recommendation → ActionRequest&#xa;→ PolicyDecision → Approval" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="710" y="400" width="270" height="120" as="geometry"/></mxCell>
+        <mxCell id="result" value="ExecutionResult&#xa;→ VerificationResult" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFBF1;strokeColor=#0F766E;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="1070" y="400" width="250" height="120" as="geometry"/></mxCell>
+        <mxCell id="audit" value="AuditRecord&#xa;追加写 + SHA-256 哈希链" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;fontColor=#0F172A;fontSize=15;spacing=8;" vertex="1" parent="1"><mxGeometry x="710" y="650" width="270" height="110" as="geometry"/></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2563EB;endArrow=block;endFill=1;" edge="1" parent="1" source="source" target="signal"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#D97706;endArrow=block;endFill=1;" edge="1" parent="1" source="signal" target="incident"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7C3AED;endArrow=block;endFill=1;" edge="1" parent="1" source="incident" target="task"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="Finding 候选" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#0284C7;endArrow=block;endFill=1;" edge="1" parent="1" source="task" target="fact"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="证据校验" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#16A34A;endArrow=block;endFill=1;" edge="1" parent="1" source="source" target="fact"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#16A34A;endArrow=block;endFill=1;" edge="1" parent="1" source="fact" target="action"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#E11D48;endArrow=block;endFill=1;" edge="1" parent="1" source="action" target="result"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" value="全链路记录" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;endArrow=block;endFill=1;" edge="1" parent="1" source="result" target="audit"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="incident" target="audit"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

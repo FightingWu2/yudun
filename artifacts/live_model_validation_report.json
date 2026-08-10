@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-09T18:38:08Z",
+  "live_model_validation": [
+    {
+      "provider": "DEEPSEEK",
+      "model_id": null,
+      "agent_type": "MAIN_AGENT",
+      "status": "BLOCKED_CONFIG",
+      "missing_environment_variables": [
+        "DEEPSEEK_API_KEY",
+        "DEEPSEEK_BASE_URL",
+        "DEEPSEEK_MODEL"
+      ],
+      "request_count": 0,
+      "success_count": 0,
+      "schema_valid_count": 0,
+      "fallback_count": 0,
+      "latency_ms": [],
+      "error_types": [],
+      "tool_scope_validation": "NOT_RUN",
+      "secret_scan_result": "PASS"
+    },
+    {
+      "provider": "QWEN",
+      "model_id": null,
+      "agent_type": "INVESTIGATION_AGENT",
+      "status": "BLOCKED_CONFIG",
+      "missing_environment_variables": [
+        "QWEN_API_KEY",
+        "QWEN_BASE_URL",
+        "QWEN_MODEL"
+      ],
+      "request_count": 0,
+      "success_count": 0,
+      "schema_valid_count": 0,
+      "fallback_count": 0,
+      "latency_ms": [],
+      "error_types": [],
+      "tool_scope_validation": "NOT_RUN",
+      "secret_scan_result": "PASS"
+    }
+  ],
+  "contains_credentials": false,
+  "contains_full_prompts": false,
+  "contains_hidden_chain_of_thought": false
+}

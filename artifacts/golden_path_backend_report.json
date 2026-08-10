@@ -1,0 +1,888 @@
+{
+  "generated_for": "DEV-016-025 deterministic backend regression",
+  "provider": "DETERMINISTIC_TEST_MODEL",
+  "live_model_validation": "PENDING_NO_CONFIGURATION",
+  "incident_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+  "incident_status": "CLOSED",
+  "action_request_id": "arq_01KZKVREEEMCNV1D7EEQ1D5W66",
+  "approval_id": "apr_01KZKVREEN9JWG9C73EXJ27QD9",
+  "request_digest": "82db314e4d42f945846c38622a188476a33a8876dc400f9b0f4bd3e593af4823",
+  "execution_id": "exe_01KZKVREF773FEQZ7YDD56NZ5W",
+  "verification_id": "ver_01KZKVREFCB1QDDCYACP9Z005Q",
+  "interrupt_observed": true,
+  "checkpoint_database_separate": true,
+  "audit_chain_valid": true,
+  "timings_ms": {
+    "pre_approval_graph": 64.407,
+    "approval_resume_to_close": 44.548,
+    "total_excluding_human_wait": 108.956,
+    "mock_execution": 14.585,
+    "nodes": {
+      "ingest_event": [
+        11.406
+      ],
+      "detect_signal": [
+        0.703
+      ],
+      "create_incident": [
+        3.883
+      ],
+      "plan_investigation": [
+        4.683
+      ],
+      "run_investigation": [
+        8.097
+      ],
+      "run_trace": [
+        8.3
+      ],
+      "evaluate_facts": [
+        10.956
+      ],
+      "build_action_plan": [
+        1.786
+      ],
+      "build_action_request": [
+        3.408
+      ],
+      "policy_check": [
+        2.5
+      ],
+      "wait_for_approval": [
+        0.32,
+        2.471
+      ],
+      "execute_action": [
+        17.666
+      ],
+      "verify_result": [
+        7.707
+      ],
+      "generate_audit": [
+        8.475
+      ],
+      "close_incident": [
+        5.197
+      ]
+    }
+  },
+  "mock_state": {
+    "before": {
+      "schema_version": "1.0",
+      "scenario_id": "scenario_api_key_compromise_v1",
+      "source_type": "MOCK",
+      "resource_environment": "SANDBOX",
+      "credential": {
+        "schema_version": "1.0",
+        "credential_ref": "credential_ref_demo_ci",
+        "old_version_status": "ACTIVE",
+        "new_version_status": "NOT_CREATED",
+        "active_version_ref": "credential_version_old_ref",
+        "updated_at": "2026-08-09T18:15:00.249339Z"
+      },
+      "attack": {
+        "schema_version": "1.0",
+        "malicious_source_ref": "source_external_203_0_113_50",
+        "old_key_attempt_enabled": true,
+        "last_attempt_result": "ALLOWED",
+        "last_attempt_at": "2026-08-09T18:15:00.249339Z"
+      },
+      "ci": {
+        "schema_version": "1.0",
+        "runner_ref": "runner_ci_01",
+        "bound_credential_version_ref": "credential_version_old_ref",
+        "last_build_status": "SUCCESS",
+        "updated_at": "2026-08-09T18:15:00.249339Z"
+      },
+      "resource": {
+        "schema_version": "1.0",
+        "high_cost_creation_enabled": true,
+        "abnormal_resource_count": 1,
+        "last_creation_result": "CREATED",
+        "updated_at": "2026-08-09T18:15:00.249339Z"
+      },
+      "version": 1
+    },
+    "after": {
+      "schema_version": "1.0",
+      "scenario_id": "scenario_api_key_compromise_v1",
+      "source_type": "MOCK",
+      "resource_environment": "SANDBOX",
+      "credential": {
+        "schema_version": "1.0",
+        "credential_ref": "credential_ref_demo_ci",
+        "old_version_status": "FROZEN",
+        "new_version_status": "ACTIVE",
+        "active_version_ref": "credential_version_new_ref",
+        "updated_at": "2026-08-09T18:15:00.324430Z"
+      },
+      "attack": {
+        "schema_version": "1.0",
+        "malicious_source_ref": "source_external_203_0_113_50",
+        "old_key_attempt_enabled": false,
+        "last_attempt_result": "DENIED",
+        "last_attempt_at": "2026-08-09T18:15:00.315607Z"
+      },
+      "ci": {
+        "schema_version": "1.0",
+        "runner_ref": "runner_ci_01",
+        "bound_credential_version_ref": "credential_version_new_ref",
+        "last_build_status": "SUCCESS",
+        "updated_at": "2026-08-09T18:15:00.324430Z"
+      },
+      "resource": {
+        "schema_version": "1.0",
+        "high_cost_creation_enabled": false,
+        "abnormal_resource_count": 1,
+        "last_creation_result": "DENIED",
+        "updated_at": "2026-08-09T18:15:00.315607Z"
+      },
+      "version": 4
+    }
+  },
+  "operations": [
+    {
+      "schema_version": "1.0",
+      "operation_id": "op_freeze_old_key",
+      "status": "SUCCEEDED",
+      "state_snapshot_before": "snp_01KZKVREESNT1G23X0AEF069FG",
+      "state_snapshot_after": "snp_01KZKVREEWDMSAQHMX37DGP4MM",
+      "receipt_ref": "evd_01KZKVREEW1YPR2TMJ5D1R6RWP",
+      "error_code": null
+    },
+    {
+      "schema_version": "1.0",
+      "operation_id": "op_create_new_version",
+      "status": "SUCCEEDED",
+      "state_snapshot_before": "snp_01KZKVREEZSQM9QXC7MAT5PZA6",
+      "state_snapshot_after": "snp_01KZKVREF1WBF1Y4KMRKQDYJAC",
+      "receipt_ref": "evd_01KZKVREF1KBEA4NPCN7JS6726",
+      "error_code": null
+    },
+    {
+      "schema_version": "1.0",
+      "operation_id": "op_update_ci_binding",
+      "status": "SUCCEEDED",
+      "state_snapshot_before": "snp_01KZKVREF2HMRC7PPT8NF0R9S1",
+      "state_snapshot_after": "snp_01KZKVREF4W9QVFMXH2BQTBDAH",
+      "receipt_ref": "evd_01KZKVREF4C1KP6EZAG4P0QD96",
+      "error_code": null
+    }
+  ],
+  "verification": [
+    {
+      "schema_version": "1.0",
+      "assertion_type": "OLD_KEY_DISABLED",
+      "passed": true,
+      "observed_value": {
+        "schema_version": "1.0",
+        "actual": "FROZEN",
+        "expected": "FROZEN",
+        "detail": null
+      },
+      "evidence_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "checked_at": "2026-08-09T18:15:00.332836Z"
+    },
+    {
+      "schema_version": "1.0",
+      "assertion_type": "OLD_KEY_CALL_REJECTED",
+      "passed": true,
+      "observed_value": {
+        "schema_version": "1.0",
+        "actual": "DENIED",
+        "expected": "DENIED",
+        "detail": null
+      },
+      "evidence_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "checked_at": "2026-08-09T18:15:00.332888Z"
+    },
+    {
+      "schema_version": "1.0",
+      "assertion_type": "MALICIOUS_ACTIVITY_STOPPED",
+      "passed": true,
+      "observed_value": {
+        "schema_version": "1.0",
+        "actual": false,
+        "expected": false,
+        "detail": null
+      },
+      "evidence_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "checked_at": "2026-08-09T18:15:00.332899Z"
+    },
+    {
+      "schema_version": "1.0",
+      "assertion_type": "NEW_KEY_ACTIVE",
+      "passed": true,
+      "observed_value": {
+        "schema_version": "1.0",
+        "actual": "ACTIVE",
+        "expected": "ACTIVE",
+        "detail": null
+      },
+      "evidence_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "checked_at": "2026-08-09T18:15:00.332908Z"
+    },
+    {
+      "schema_version": "1.0",
+      "assertion_type": "LEGITIMATE_CI_RECOVERED",
+      "passed": true,
+      "observed_value": {
+        "schema_version": "1.0",
+        "actual": "SUCCESS",
+        "expected": "SUCCESS",
+        "detail": null
+      },
+      "evidence_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "checked_at": "2026-08-09T18:15:00.332917Z"
+    },
+    {
+      "schema_version": "1.0",
+      "assertion_type": "HIGH_COST_RESOURCE_STOPPED",
+      "passed": true,
+      "observed_value": {
+        "schema_version": "1.0",
+        "actual": {
+          "enabled": false,
+          "last_result": "DENIED"
+        },
+        "expected": {
+          "enabled": false,
+          "last_result": "DENIED"
+        },
+        "detail": null
+      },
+      "evidence_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "checked_at": "2026-08-09T18:15:00.332930Z"
+    }
+  ],
+  "model_calls": [
+    {
+      "audit_id": "aud_01KZKVREDAKMPY6GW7RG3EQY0C",
+      "task_id": "tsk_01KZKVREDASWPRSJFK3D7D69NW",
+      "agent_type": "MAIN_AGENT",
+      "provider": "DETERMINISTIC_TEST",
+      "model_id": "fixture-structured-v1",
+      "prompt_version": "versioned",
+      "input_object_refs": [
+        "evd_e41e92d2baad730b6512acca",
+        "evd_3cf8ce248646a382de605b4c",
+        "evd_34efca371ce87d862560247e",
+        "evd_f8f4762d7ed2d55c74519a91",
+        "evd_b3ccd148da0022abe2d40fbe",
+        "evd_536a858ed2f79d6ab5c359c7"
+      ],
+      "output_object_refs": [],
+      "latency_ms": 0.026667024940252304,
+      "status": "SUCCEEDED",
+      "error_type": null
+    },
+    {
+      "audit_id": "aud_01KZKVREDMPQ6J08P66R9XJ0XZ",
+      "task_id": "tsk_01KZKVREDCJCFFDD0C4RQNWT5Z",
+      "agent_type": "INVESTIGATION_AGENT",
+      "provider": "DETERMINISTIC_TEST",
+      "model_id": "fixture-structured-v1",
+      "prompt_version": "versioned",
+      "input_object_refs": [
+        "evd_e41e92d2baad730b6512acca",
+        "evd_3cf8ce248646a382de605b4c",
+        "evd_34efca371ce87d862560247e",
+        "evd_f8f4762d7ed2d55c74519a91",
+        "evd_b3ccd148da0022abe2d40fbe",
+        "evd_536a858ed2f79d6ab5c359c7"
+      ],
+      "output_object_refs": [],
+      "latency_ms": 0.030792085453867912,
+      "status": "SUCCEEDED",
+      "error_type": null
+    }
+  ],
+  "tool_calls": [
+    {
+      "audit_id": "aud_01KZKVREDBFVCWRA6SDBCW6P6K",
+      "actor": "MAIN_AGENT",
+      "tool_id": "create_agent_task",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "WRITE_LOW",
+        "side_effect": true
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREDBH5FYD56YPKNYE1PA",
+      "actor": "INVESTIGATION_AGENT",
+      "tool_id": "get_evidence",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREDCENQ26P908C9BSZ3A",
+      "actor": "INVESTIGATION_AGENT",
+      "tool_id": "query_cloud_audit",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREDCP3B4A4B0V3X0ESHS",
+      "actor": "INVESTIGATION_AGENT",
+      "tool_id": "query_resource_events",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREDFM72D8SRDCNYE1AEE",
+      "actor": "INVESTIGATION_AGENT",
+      "tool_id": "get_evidence",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREDRWEN3TMGFA66QWMEA",
+      "actor": "TRACE_AGENT",
+      "tool_id": "build_timeline",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREEER1TCRS2B111FG0XN",
+      "actor": "OPERATION_AGENT",
+      "tool_id": "create_action_request",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "PROPOSAL_ONLY",
+        "side_effect": true
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREFMADF97Z1N40VCRNFX",
+      "actor": "AUDIT_AGENT",
+      "tool_id": "query_audit_records",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    },
+    {
+      "audit_id": "aud_01KZKVREFNTYGWVSDZW2RKMYY3",
+      "actor": "AUDIT_AGENT",
+      "tool_id": "generate_report_input",
+      "result": "TOOL_ACCESS_GRANTED",
+      "detail": {
+        "tool_version": "1.0",
+        "risk_level": "READ_ONLY",
+        "side_effect": false
+      }
+    }
+  ],
+  "reasoning_trace": [
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.263472Z",
+      "stage": "OBSERVATION",
+      "actor": "EVENT_MANAGER",
+      "object_type": "SecuritySignal",
+      "object_id": "sig_55a1d1be73cd7fc6c90d4689",
+      "summary": "Evidence-backed CI Action mutation signal opened an incident",
+      "input_refs": [
+        "evd_e41e92d2baad730b6512acca"
+      ],
+      "output_refs": [
+        "sig_55a1d1be73cd7fc6c90d4689"
+      ],
+      "source_type": "SYSTEM",
+      "result": "SIGNAL_OBSERVED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.265290Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to DETECTED",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.269166Z",
+      "stage": "TASK",
+      "actor": "MAIN_AGENT",
+      "object_type": "AgentRuntime",
+      "object_id": "tsk_01KZKVREDCJCFFDD0C4RQNWT5Z",
+      "summary": "Main Agent Task Created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_e41e92d2baad730b6512acca",
+        "evd_3cf8ce248646a382de605b4c",
+        "evd_34efca371ce87d862560247e",
+        "evd_f8f4762d7ed2d55c74519a91",
+        "evd_b3ccd148da0022abe2d40fbe",
+        "evd_536a858ed2f79d6ab5c359c7"
+      ],
+      "source_type": "SYSTEM",
+      "result": "MAIN_AGENT_TASK_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.270260Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to INVESTIGATING",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.278482Z",
+      "stage": "FINDING",
+      "actor": "INVESTIGATION_AGENT",
+      "object_type": "AgentRuntime",
+      "object_id": "res_01KZKVREDN812PKYXGF6CHKVTZ",
+      "summary": "Investigation Agent Completed",
+      "input_refs": [],
+      "output_refs": [
+        "fnd_01KZKVREDMAQ40CTZ2C1EYK0RV"
+      ],
+      "source_type": "SYSTEM",
+      "result": "INVESTIGATION_AGENT_COMPLETED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.287380Z",
+      "stage": "FINDING",
+      "actor": "TRACE_AGENT",
+      "object_type": "AgentRuntime",
+      "object_id": "res_01KZKVREDYYXNA0ATVH7MDREAE",
+      "summary": "Trace Agent Completed",
+      "input_refs": [],
+      "output_refs": [
+        "fnd_01KZKVREDYFRYZFEXRM89798ZA"
+      ],
+      "source_type": "SYSTEM",
+      "result": "TRACE_AGENT_COMPLETED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.290750Z",
+      "stage": "FACT",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "ConfirmedFact",
+      "object_id": "fac_01KZKVREE16MGMMCWH1ZJAZWW8",
+      "summary": "Promoted evidence-backed fact CI_ACTION_MUTATED",
+      "input_refs": [
+        "evd_e41e92d2baad730b6512acca"
+      ],
+      "output_refs": [
+        "fac_01KZKVREE16MGMMCWH1ZJAZWW8"
+      ],
+      "source_type": "SYSTEM",
+      "result": "FACT_PROMOTED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.291963Z",
+      "stage": "FACT",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "ConfirmedFact",
+      "object_id": "fac_01KZKVREE3TAGMZQJHEC022NV3",
+      "summary": "Promoted evidence-backed fact SECRET_ACCESSED",
+      "input_refs": [
+        "evd_3cf8ce248646a382de605b4c"
+      ],
+      "output_refs": [
+        "fac_01KZKVREE3TAGMZQJHEC022NV3"
+      ],
+      "source_type": "SYSTEM",
+      "result": "FACT_PROMOTED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.293100Z",
+      "stage": "FACT",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "ConfirmedFact",
+      "object_id": "fac_01KZKVREE49Y52DAZZ2Z9ZDZ2P",
+      "summary": "Promoted evidence-backed fact CREDENTIAL_EXPOSED",
+      "input_refs": [
+        "evd_34efca371ce87d862560247e"
+      ],
+      "output_refs": [
+        "fac_01KZKVREE49Y52DAZZ2Z9ZDZ2P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "FACT_PROMOTED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.294293Z",
+      "stage": "FACT",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "ConfirmedFact",
+      "object_id": "fac_01KZKVREE54GKSXK5ET6407J9D",
+      "summary": "Promoted evidence-backed fact CREDENTIAL_ABUSED",
+      "input_refs": [
+        "evd_f8f4762d7ed2d55c74519a91"
+      ],
+      "output_refs": [
+        "fac_01KZKVREE54GKSXK5ET6407J9D"
+      ],
+      "source_type": "SYSTEM",
+      "result": "FACT_PROMOTED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.295563Z",
+      "stage": "FACT",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "ConfirmedFact",
+      "object_id": "fac_01KZKVREE6BVV9WTPDF6J90T1P",
+      "summary": "Promoted evidence-backed fact SENSITIVE_DATA_ACCESSED",
+      "input_refs": [
+        "evd_b3ccd148da0022abe2d40fbe"
+      ],
+      "output_refs": [
+        "fac_01KZKVREE6BVV9WTPDF6J90T1P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "FACT_PROMOTED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.297125Z",
+      "stage": "FACT",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "ConfirmedFact",
+      "object_id": "fac_01KZKVREE8BP00SFMPNKE2NMQ9",
+      "summary": "Promoted evidence-backed fact HIGH_COST_RESOURCE_CREATED",
+      "input_refs": [
+        "evd_536a858ed2f79d6ab5c359c7"
+      ],
+      "output_refs": [
+        "fac_01KZKVREE8BP00SFMPNKE2NMQ9"
+      ],
+      "source_type": "SYSTEM",
+      "result": "FACT_PROMOTED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.298623Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to ATTRIBUTED",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.300679Z",
+      "stage": "DECISION",
+      "actor": "MAIN_AGENT",
+      "object_type": "ActionRecommendation",
+      "object_id": "rec_01KZKVREEB7R0VR272YWE366S7",
+      "summary": "Main Agent proposed credential containment and rotation",
+      "input_refs": [],
+      "output_refs": [
+        "rec_01KZKVREEB7R0VR272YWE366S7"
+      ],
+      "source_type": "SYSTEM",
+      "result": "ACTION_RECOMMENDATION_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.303983Z",
+      "stage": "ACTION",
+      "actor": "OPERATION_AGENT",
+      "object_type": "ActionRequest",
+      "object_id": "arq_01KZKVREEEMCNV1D7EEQ1D5W66",
+      "summary": "Operation Agent proposed a governed action request",
+      "input_refs": [
+        "rec_01KZKVREEB7R0VR272YWE366S7"
+      ],
+      "output_refs": [
+        "arq_01KZKVREEEMCNV1D7EEQ1D5W66"
+      ],
+      "source_type": "SYSTEM",
+      "result": "ACTION_REQUEST_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.307026Z",
+      "stage": "DECISION",
+      "actor": "POLICY_ENGINE",
+      "object_type": "PolicyDecision",
+      "object_id": "pol_01KZKVREEHDRKX0JFX2QR0NDBM",
+      "summary": "Policy outcome ALLOW_WITH_APPROVAL",
+      "input_refs": [
+        "arq_01KZKVREEEMCNV1D7EEQ1D5W66"
+      ],
+      "output_refs": [
+        "pol_01KZKVREEHDRKX0JFX2QR0NDBM"
+      ],
+      "source_type": "SYSTEM",
+      "result": "POLICY_DECIDED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.311355Z",
+      "stage": "DECISION",
+      "actor": "artifact_human_approver",
+      "object_type": "ApprovalRecord",
+      "object_id": "apr_01KZKVREEN9JWG9C73EXJ27QD9",
+      "summary": "Human approval decision: APPROVED",
+      "input_refs": [],
+      "output_refs": [
+        "apr_01KZKVREEN9JWG9C73EXJ27QD9"
+      ],
+      "source_type": "SYSTEM",
+      "result": "ACTION_APPROVAL_DECIDED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.315455Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREESPV4MVDZ0JHHJP1PB",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREESPV4MVDZ0JHHJP1PB"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.317702Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREEW1YPR2TMJ5D1R6RWP",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREEW1YPR2TMJ5D1R6RWP"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.319471Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to CONTAINED",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.320908Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREEZHG81EQ7H8YY1HMNH",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREEZHG81EQ7H8YY1HMNH"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.322607Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREF1KBEA4NPCN7JS6726",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREF1KBEA4NPCN7JS6726"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.324184Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREF26BFE3NS1MMSE1FQV",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREF26BFE3NS1MMSE1FQV"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.326089Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREF4C1KP6EZAG4P0QD96",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREF4C1KP6EZAG4P0QD96"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.327826Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to ROTATED",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.329458Z",
+      "stage": "OBSERVATION",
+      "actor": "SYSTEM_EXECUTOR",
+      "object_type": "ExecutionResult",
+      "object_id": "exe_01KZKVREF773FEQZ7YDD56NZ5W",
+      "summary": "Three-step Mock credential plan completed",
+      "input_refs": [],
+      "output_refs": [
+        "exe_01KZKVREF773FEQZ7YDD56NZ5W"
+      ],
+      "source_type": "SYSTEM",
+      "result": "CONTROLLED_EXECUTION_COMPLETED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.332632Z",
+      "stage": "EVIDENCE",
+      "actor": "MOCK_STATE_SERVICE",
+      "object_type": "EvidenceReference",
+      "object_id": "evd_01KZKVREFAPSN8BWQECBRV715T",
+      "summary": "Evidence reference created",
+      "input_refs": [],
+      "output_refs": [
+        "evd_01KZKVREFAPSN8BWQECBRV715T"
+      ],
+      "source_type": "SYSTEM",
+      "result": "EVIDENCE_CREATED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.334626Z",
+      "stage": "OBSERVATION",
+      "actor": "VERIFICATION_ENGINE",
+      "object_type": "VerificationResult",
+      "object_id": "ver_01KZKVREFCB1QDDCYACP9Z005Q",
+      "summary": "Verification result PASSED",
+      "input_refs": [],
+      "output_refs": [
+        "ver_01KZKVREFCB1QDDCYACP9Z005Q"
+      ],
+      "source_type": "SYSTEM",
+      "result": "VERIFICATION_COMPLETED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.337163Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to VERIFIED",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    },
+    {
+      "schema_version": "1.0",
+      "timestamp": "2026-08-09T18:15:00.352017Z",
+      "stage": "DECISION",
+      "actor": "EVENT_STATE_MANAGER",
+      "object_type": "SecurityIncident",
+      "object_id": "inc_01KZKVRED6E92V68GVFS3ZJF4P",
+      "summary": "Transitioned to CLOSED",
+      "input_refs": [],
+      "output_refs": [
+        "inc_01KZKVRED6E92V68GVFS3ZJF4P"
+      ],
+      "source_type": "SYSTEM",
+      "result": "STATE_TRANSITIONED"
+    }
+  ]
+}
